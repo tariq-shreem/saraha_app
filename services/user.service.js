@@ -28,11 +28,10 @@ module.exports.signIn = async ( req,res)=>{
             let token = jwt.sign({userId:user._id,name:user.name,emailConfirm:user.emailConfirm},
                 'knowledge@@123NodeSaraha');
 
-                
                     
-                    res.json({message:'login',user});
+                    res.json({message:'login',token});
                 
-                
+                }
         }else {
             res.json({message:'password incorrect'});
         }
