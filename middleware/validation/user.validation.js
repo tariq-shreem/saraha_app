@@ -6,7 +6,7 @@ const schema = {
         email:Joi.string().email().required(),
         password:Joi.string().required(),
         repassword:Joi.ref('password'),
-        age:Joi.number().min(3).max(20).required(),
+       
     }),
   
 }
