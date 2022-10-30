@@ -31,7 +31,7 @@ module.exports.signIn = async ( req,res)=>{
                     
                     res.json({message:'login',token});
                 
-                }
+                
         }else {
             res.json({message:'password incorrect'});
         }
