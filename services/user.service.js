@@ -30,7 +30,7 @@ module.exports.signIn = async ( req,res)=>{
 
                 
                     
-                    res.json({message:'login',token});
+                    res.json({message:'login',user});
                 
                 
         }else {
