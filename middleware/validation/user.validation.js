@@ -15,9 +15,8 @@ module.exports.userValidation = (req,res,next)=>{
     methods.map( (key)=>{
         const {error} =schema[key].validate(req[key],{abortEarly:false});
         if(error){
-            error.details.map( (ele)=>{
-            msgArray.push(ele);
-        });
+            msgArray.push(error);
+    
     }//
     })//
     if(msgArray.length > 0){
