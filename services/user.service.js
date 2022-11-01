@@ -45,8 +45,8 @@ module.exports.signIn = async ( req,res)=>{
 
 module.exports.allUser = async ( req,res)=>{
       
-      const users = userModel.find({});
-      res.json({message:'success',users});
+      const users = await userModel.find({});
+      res.json({message:'success'},users);
                 
 }
 
