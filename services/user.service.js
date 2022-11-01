@@ -42,6 +42,15 @@ module.exports.signIn = async ( req,res)=>{
     }
 }
 
+
+module.exports.allUser = async ( req,res)=>{
+      
+      const users = userModel.find({});
+      res.json({message:'success',users});
+                
+}
+
+
 module.exports.emailVerify = async (req,res)=>{
     const {token} = req.params;
     jwt.verify(token,'verifyEmail',async (err,decoded)=>{
