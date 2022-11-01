@@ -20,7 +20,7 @@ module.exports.userValidation = (req,res,next)=>{
     }//
     })//
     if(msgArray.length > 0){
-        res.json({message:msgArray});
+        res.json({msgArray});
     }else{
         next();
     }
